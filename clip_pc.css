@@ -1,12 +1,221 @@
-@media all and (min-width: 1024px) {
+@media (min-width: 0px) and (max-width: 1025px) {
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .master_frame {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+  }
+
+  .left_main_logo {
+    display: none;
+  }
+
+  .title_text {
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    align-self: center;
+    text-align: left;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+  }
+
+  .golden_color {
+    color: #e3cf9c;
+    font-weight: 900;
+    font-size: 1.7rem;
+  }
+
+  /* ------------------메인 컨텐츠 박스----------------------- */
+
+  .main_box {
+    display: grid;
+    grid-template-rows: 105px 1fr 65px;
+    justify-items: space-between;
+    max-width: 500px;
+    border: 1px solid #E4E7EA;
+    height: 100%;
+    position:relative;
+    overflow: hidden;
+  }
+
+  .main_section {
+    /* height: 735px; */
+    width: 100% ;
+    position:relative;
+    overflow-y: auto;
+  }
+
+  .top_bar {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #E4E7EA;
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    padding: 3px 0;
+    position: relative;
+  }
+
+  .top_bar_logo {
+    padding: 5px 0;
+    align-self: center;
+  }
+
+  .top_bar_menu_box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .top_bar_menu_list {
+    display: flex;
+    flex-direction: row;
+    padding: 0 15px;
+  }
+
+  .top_bar_menu_list span {
+    padding: 8px 12px;
+    margin-right: 10px;
+    font-weight: 400;
+    color: #8B8B8B;
+  }
+
+  .top_bar_menu_list span:hover {
+    font-weight: 900;
+    color: #e3cf9c;
+    border-bottom: 2px solid #e3cf9c;
+  }
+
+
+  .contents_1title img {
+    width: 100%;
+  }
+
+  .contents_2genera {
+    margin: 2rem 1rem;
+  }
+
+  .contents_2_bar {
+    padding: 1rem 0;
+    margin: 0 10px;
+    font-weight: 900;
+    font-size: 1.3rem;
+  }
+
+  .genera_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .genera_box {
+    width: 45%;
+    line-height: 0.2rem;
+    margin: 5px;
+  }
+
+  .genus_img_box img {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .scientific_name {
+    font-weight: bolder;
+    font-size: 0.7rem;
+  }
+
+  .common_name {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-top: 12px;
+
+  }
+
+  /* ------------------회사정보-------------------- */
+  .CLIP_info {
+    background-color: #f8f9fa;
+    padding: 1rem 2rem;
+  }
+  .info_title {
+    font-weight: 600;
+    line-height: 2;
+  }
+  .detail_title {
+    font-weight: 400;
+    line-height: 1.5;
+    color: #9ba2ae;
+  }
+  .detail_descripton {
+    font-weight: 200;
+  }
+
+
+
+  /* -------------------홈 메뉴바-------------------- */
+
+  .bottom_bar {
+    border-top: 1px solid #E4E7EA;
+    position: relative;
+    bottom: 0;
+  }
+
+  .bottom_bar_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+
+  .bottom_icon_box {
+    padding: 2px;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    font-weight: 200;
+    text-align: center;
+  }
+
+  .bar_logo_ci {
+    align-self: center;
+    margin-bottom: 0.3rem;
+  }
+
+  .bottom_svg_icon {
+    align-self: center;
+    width: 22px;
+    margin-bottom: 0.3rem;
+  }
 
 }
+
+/* -----------------OUT of MEDIA QUERY---------------------- */
+
+
+@media (min-width: 1026px) {
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Noto Sans KR', sans-serif;
-  height: 100%;
 }
 
 a {
@@ -20,7 +229,7 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
-
+  height: 100vh;
 }
 
 .left_main_logo {
@@ -51,16 +260,18 @@ a {
   display: grid;
   grid-template-rows: 105px 1fr 65px;
   justify-items: space-between;
-  width: 500px;
+  max-width: 500px;
   border: 1px solid #E4E7EA;
-  height: auto;
+  height: 100%;
   position:relative;
-  top: 0;
+  overflow: hidden;
 }
 
 .main_section {
-  height: 735px;
-  overflow: scroll;
+  /* height: 735px; */
+  width: 100% ;
+  position:relative;
+  overflow-y: auto;
 }
 
 .top_bar {
@@ -68,7 +279,7 @@ a {
   flex-direction: column;
   border-bottom: 1px solid #E4E7EA;
   background-color: white;
-  width: 500px;
+  width: 100%;
   height: 100px;
   padding: 3px 0;
   position: relative;
