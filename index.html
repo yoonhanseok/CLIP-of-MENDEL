@@ -6,6 +6,7 @@
       function submitEvent(){
         const submit_text = document.getElementById("text_V").value;
         if(submit_text == "" || submit_text == null ) {
+          event.preventDefault();
           alert('입력 값이 없습니다')
         }
         else { alert(submit_text);}
