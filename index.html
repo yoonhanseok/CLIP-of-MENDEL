@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="JS.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <script src="FT.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div class="whole_frame">
+
+      <h1 class="PJ_title">자바스크립트 연습장</h1>
+      <div class="inner_script">
+        <div class="submit_alert">
+          <h3>Text에서 Submit으로 입력받은 내용을 Alert</h3>
+          <form action="index.html" method="post">
+            <input id ="text_V" type="text" name="writing">
+            <input class= "BTN" type="submit" name="검색" onclick="submitEvent()">
+          </form>
+        </div>
+
+        <div class="text_col_change">
+          <h3 class="txtcolorchange">이건 색깔이 변하는 텍스트쟈나</h3>
+          <input type="button" name="text_color_change" value="색 바꾸기" onclick="TC_changer(this)">
+        </div>
+
+        <div class="BG_color_change">
+          <h3 class="bgcolorchange">화면의 색 모드를 변화</h3>
+          <input class="CCB" type="button" name="bgC_change" value="다크모드" onclick="Mode_changer(this)">
+        </div>
+
+        <div class="Font_size_change">
+          <h3 class="FSchange">폰트의 크기를 변화</h3>
+          <input class="FSC" type="button" name="fontSize_change" value="폰트 키우기" onclick="fontSize_changer(this)">
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
