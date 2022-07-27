@@ -23,6 +23,7 @@ function submitEvent(){
     retern false;
   }
   else { 
+    event.preventDefault();
     alert(submit_text);
     retern false;
   }
