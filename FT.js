@@ -20,6 +20,7 @@ function submitEvent(){
   if(submit_text == "" || submit_text == null ) {
     event.preventDefault();
     alert('입력 값이 없습니다')
+    retern false;
   }
   else { alert(submit_text);}
 }
