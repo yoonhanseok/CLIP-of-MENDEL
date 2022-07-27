@@ -22,7 +22,10 @@ function submitEvent(){
     alert('입력 값이 없습니다')
     retern false;
   }
-  else { alert(submit_text);}
+  else { 
+    alert(submit_text);
+    retern false;
+  }
 }
 
 //버튼을 누르면 색이 변하는 텍스트, 토글 방식
