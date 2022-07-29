@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <script src="JS.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>자바스크립트 연습장 V2</title>
+  </head>
+  <body>
+    <div class="master_frame">
+      <div class="title_frame">
+        <h1>자바스크립트 연습하기 V2</h1>
+      </div>
+      <div class="inner_frame">
+        <div class="TXTtoALERT">
+          <h3>Text to ALERT</h3>
+          <input id="TXTbox" type="text" name="TXTbox">
+          <input type="button" value="제출하기" onclick="TextToAlert()">
+        </div>
+        <div class="TXTcolorCHANGE">
+          <h3 id="TCC_TEXT">Text Color Change</h3>
+          <input class="TCC_button" type="button" value="색 바꾸기" onclick="TextColorChange(this)">
+        </div>
+        <div id="PAGEmodeCHANGE">
+          <h3>Page Mode Change</h3>
+          <input type="button" name="PMC_button" value="다크모드" onclick="PageModeChange(this)">
+        </div>
+        <div id="FONTsizeCHANGE">
+          <h3>Font size Change</h3>
+          <input type="button" name="FSC_button" value="폰트 키우기" onclick="FontSizeChange(this)">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
