@@ -1,39 +1,39 @@
-<!DOCTYPE html>
-<html lang="kr" dir="ltr">
-  <head>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script>
-      $(function(){
-        menuSlide = false;
-        $('#menuA').click(function(){
-          if(menuSlide){
-            menuSlide = false;
-            $('#menuA').val('OFF');
-          } else {
-            menuSlide = true;
-            $('menuA').val('ON');
-          }
-          $('.subMenu').slideToggle('500', function(){
-            $(this).css('color', 'black');
-          });
-        });
-      });
-    </script>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-<!--     <input id="menuA" type="button" name="menuA" value="OFF"> -->
-    <div id="slidingMenu">
-      <div id="menuA">슬라이딩 메뉴</div>
-        <div class="subMenu">abcd</div>
-        <div class="subMenu">efgh</div>
-        <div class="subMenu">ijjhf</div>
-        <div class="subMenu">jhfg</div>
-        <div class="subMenu">sdfg</div>
-        <div class="subMenu">nbxd</div>
-    </div>
-    
-  </body>
-</html> 
+$(document).ready(function(){
+  $('#menuA').click(function(){
+    $('.subMenu').slideToggle('500', function(){
+      $(this).css('color', 'black');
+    });
+  });
+});
+
+$(document).ready(function(){
+  $("#draggableElements img").draggable({
+    containment : "#dragNDropBoxToBox",
+    revert: "invalid",
+  });
+
+  $("#droppableElements").droppable();
+});
+
+$(document).ready(function(){
+  $('.switchBody, .switchBall').click(function(){
+    $('.toggleText').toggle('500', function(){
+      if($('.toggleText').text() === "OFF") {
+        $('.switchBall').animate({left: '32px',}, 'fast');
+        $('.toggleText').css("position", "relative");
+        $('.toggleText').text("ON");
+        $('.switchBody').css('backgroundColor', 'green');
+        $('.modeName').css('color', 'white');
+        $('body').css('backgroundColor', 'black');
+      } else {
+        $('.switchBall').animate({left: '3px',}, 'fast');
+        $('.toggleText').css("position", "relative");
+        $('.toggleText').text("OFF");
+        $('.switchBody').css('backgroundColor', 'gray');
+        $('.modeName').css('color', 'black');
+        $('body').css('backgroundColor', 'white');
+      }
+      $('.toggleText').css("display", "block");
+    });
+  });
+});
