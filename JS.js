@@ -1,58 +1,39 @@
+$(document).ready(function(){
+  $('#menuA').click(function(){
+    $('.subMenu').slideToggle('500', function(){
+      $(this).css('color', 'black');
+    });
+  });
+});
 
-var Linked = {
- FONTCOLOR:function (color) {
-   document.getElementById("TCC_TEXT").style.color = color;
- },
- MODEFONTCOLOR:function (color) {
-   document.getElementById("PAGEmodeCHANGE").style.color = color;
- },
- MODEBGCOLOR:function (color) {
- document.getElementById("PAGEmodeCHANGE").style.backgroundColor = color;
- },
- FONTSIZE:function (size) {
-   document.getElementById("FONTsizeCHANGE").style.fontSize = size;
- },
- }
+$(document).ready(function(){
+  $("#draggableElements img").draggable({
+    containment : "#dragNDropBoxToBox",
+    revert: "invalid",
+  });
 
-function TextToAlert() {
-const textBox = document.getElementById("TXTbox").value;
- if (textBox == ""){
-   alert("내용을 입력하세요")
- } else {
-   alert(textBox)
-   textBox == ""
- }
+  $("#droppableElements").droppable();
+});
 
-}
-
-function TextColorChange(self) {
- if (self.value === '색 바꾸기') {
-   Linked.FONTCOLOR('#e85743');
-   self.value = 'RETURN';
- } else {
-   Linked.FONTCOLOR('black');
-   self.value = "색 바꾸기";
- }
-}
-
-function PageModeChange(self) {
- if (self.value === '다크모드') {
-   Linked.MODEFONTCOLOR('white');
-   Linked.MODEBGCOLOR('#5c5c5c');
-   self.value = '컬러모드';
- } else {
-   Linked.MODEFONTCOLOR('black');
-   Linked.MODEBGCOLOR('#9be88b');
-   self.value = "다크모드";
- }
-}
-
-function FontSizeChange(self) {
- if (self.value === '폰트 키우기') {
-   Linked.FONTSIZE('25px');
-   self.value = '폰트 줄이기';
- } else {
-   Linked.FONTSIZE('');
-   self.value = "폰트 키우기";
- }
-}
+$(document).ready(function(){
+  $('.switchBody, .switchBall').click(function(){
+    $('.toggleText').toggle('500', function(){
+      if($('.toggleText').text() === "OFF") {
+        $('.switchBall').animate({left: '32px',}, 'fast');
+        $('.toggleText').css("position", "relative");
+        $('.toggleText').text("ON");
+        $('.switchBody').css('backgroundColor', 'green');
+        $('.modeName').css('color', 'white');
+        $('body').css('backgroundColor', 'black');
+      } else {
+        $('.switchBall').animate({left: '3px',}, 'fast');
+        $('.toggleText').css("position", "relative");
+        $('.toggleText').text("OFF");
+        $('.switchBody').css('backgroundColor', 'gray');
+        $('.modeName').css('color', 'black');
+        $('body').css('backgroundColor', 'white');
+      }
+      $('.toggleText').css("display", "block");
+    });
+  });
+});
