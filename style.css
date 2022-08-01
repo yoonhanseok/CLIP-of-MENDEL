@@ -271,7 +271,6 @@ footer {
 
 .additionalCard .upperFloor div h4{
   border: white solid 2px;
-  width: 90px;
   text-align: center;
   border-radius: 25px;
   padding: 10px;
@@ -292,6 +291,7 @@ footer {
 }
 
 .useSubway h4{
+  width: 100px;
   margin-left: 20px;
 }
 
