@@ -309,7 +309,8 @@ footer {
 }
 
 .historyCard h4{
-  margin-left: 415px;
+  width: 130px;
+  margin-left: 400px;
 }
 
 .additionalCard .lowerFloor {
