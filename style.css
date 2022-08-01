@@ -54,7 +54,6 @@ footer {
 
 .subMenu {
   position: absolute;
-  left: 1280px;
 }
 
 .subMenu ul{
@@ -310,7 +309,7 @@ footer {
 }
 
 .historyCard h4{
-  margin-left: 400px;
+  margin-left: 415px;
 }
 
 .additionalCard .lowerFloor {
