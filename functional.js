@@ -1,40 +1,72 @@
+
+// ================ 상단 메뉴바 펼치고 닫기
 $(document).ready(function(){
-  $(".menuList p").hover(function(){
+  var firstT = $("#firstTarget").attr("class");
+  var secondT = $("secondTarget").attr("class");
+  var thirdT = $("thirdTarget").attr("class");
 
-    $(this).css({color: "green",})
-    // $(".underList").css({
-    //   display: "block",
-    //   position: "absolute",
-    // })
-    $(".underList").slideToggle('500', function(){
-      $(this).css({
-        display: "block",
-      })
-    })
-    $(".underBackgroundSection").slideToggle('500', function(){
-      $(this).css({
-        display: "block",
-        position: "absolute",
-      })
-    })
-  },
+  $(".menuList p").mouseover(function(){
+    $(this).css({color: "#279223",})
+    $(".underList").stop().slideDown('400')
+    $(".underBackgroundSection").stop().slideDown('400');
+    $(this).addClass("openBar")
+  });
 
-  function(){
-    $(this).css({color: "black",});
-    $(".underList").css({display: "none", })
-    $(".underBackgroundSection").slideToggle('500', function(){
-      $(this).css({
-        display: "none",
-      })
-    })
-  }); //mouseout()에서 작동하는 함수
+  $(".menuList p").mouseout(function(){
+    $(this).css({color: "black",})
+    $(".underList").stop().slideUp('400')
+    $(".underBackgroundSection").stop().slideUp('400')
+    $(this).removeClass("openBar")
+  });
 
-}); //즉, hover()는 둘을 하나의 함수로 묶은 메소드
+  $(".underList").mouseover(function(){
+    $(this).addClass("openBar")
+  });
+
+  $(".underList").mouseout(function(){
+    $(this).removeClass("openBar")
+  });
+
+  $(".underList li").mouseover(function(){
+    $(this).css({textDecoration: "underline", color: "#279223",})
+    $(this).addClass("openBar")
+  });
+
+  $(".underList li").mouseout(function(){
+    $(this).css({textDecoration: "", color: "#666666",})
+    $(this).removeClass("openBar")
+  });
+});
+
+// $(document).ready(function(){
+//   var firstT = $("#firstTarget").attr("class");
+//   var secondT = $("secondTarget").attr("class");
+//   var thirdT = $("thirdTarget").attr("class");
+//
+//
+//   if(secondT === "openBar" && thirdT === !"underList openBar"){
+//     $(".underList").stop().slideUp('400')
+//     $(".underBackgroundSection").stop().slideUp('400')
+//   } else {
+//     alert(firstT);
+//
+//     alert(thirdT);
+//   }
+// });
 
 
+// =================상단 메뉴 컬러 및 밑줄 강조
+// $(document).ready(function(){
+//   $(".underList li").hover(function(){
+//     $(this).css({textDecoration: "underline", color: "#279223",})
+//   },
+//   function(){
+//     $(this).css({textDecoration: "", color: "#666666",})
+//   });
+// });
+// =====================================
 
-
-// SNS 마우스 활성화 버튼
+// =================   SNS 마우스 활성화 버튼
 $(document).ready(function(){
   $(".snsButtonGroup div img").hover(function(){
     $(this).css({
@@ -48,6 +80,32 @@ $(document).ready(function(){
     })
   }); //mouseout()에서 작동하는 함수
 }); //즉, hover()는 둘을 하나의 함수로 묶은 메소드
+// =======================================
+
+
+// =================써브웨이 메뉴 좌/우 화살표 활성화 버튼
+$(document).ready(function(){
+  $(".warpArrowL").hover(function(){
+    $(this).css({
+      backgroundPosition: "0px -50px",
+    })
+  }, function(){
+    $(this).css({
+      backgroundPosition: "0px 0px",
+    })
+  });
+  $(".warpArrowR").hover(function(){
+    $(this).css({
+      backgroundPosition: "-50px -50px",
+    })
+  }, function(){
+    $(this).css({
+      backgroundPosition: "-50px 0px",
+    })
+  });
+});
+// =======================================
+
 
 
 $(document).ready(function(){
@@ -171,6 +229,9 @@ $(document).ready(function(){
   });
 });
 
+
+// =============써브웨이 메뉴 호버링============
+
 $(document).ready(function(){
   $(".warpD").hover(function(){
     $(".warpD img").css({
@@ -206,3 +267,21 @@ $(document).ready(function(){
     })
   });
 });
+
+// =======================================
+
+// =================상단 메뉴 컬러 및 밑줄 강조
+$(document).ready(function(){
+  $(".newCardRight ul h4").hover(function(){
+    $(this).css({
+      textDecoration: "underline",
+      color: "#279223",
+    })
+  }, function(){
+    $(this).css({
+      textDecoration: "",
+      color: "#666666",
+    })
+  });
+});
+// =====================================
