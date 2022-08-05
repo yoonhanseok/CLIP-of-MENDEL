@@ -2,6 +2,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Noto Sans KR', sans-serif;
+  width: 100%;
 }
 
 li {
@@ -19,6 +20,7 @@ header {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  width: 100%;
   margin: 0;
   padding: 0;
   border-top: green solid 5px;
@@ -31,6 +33,7 @@ main {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  width: 100%;
 }
 
 footer {
@@ -39,6 +42,7 @@ footer {
   justify-content: center;
   font-size: 13px;
   padding: 30px 0;
+  width: 100%;
   margin: 0;
   color: #666666;
   background-color: #2a2a2a;
@@ -157,12 +161,23 @@ footer {
   position: relative;
 }
 
-.bannerViewport {
-  overflow:hidden;
+.dotWarp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 92;
+  position: absolute;
+  left: 75%;
+  top: 370px;
+  width: 120px;
 }
 
-.largeBannerGroup {
-  margin: 0px;
+.dotWarp div {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 0 5px;
 }
 
 .subTab {
@@ -207,47 +222,29 @@ footer {
   margin-left: 15px;
 }
 
-.imgBanner {
-  max-width: 100%;
-  position: relative;
+#bannerPagination {
+  position: absolute;
+  left: 75%;
+  top: 360px;
 }
 
-.bannerViewport {
-  overflow: hidden;
-  position: relative;
-  height: 440px;
-  width: 100%;
+#bannerPagination .swiper-pagination-bullet {
+  border-radius: 10px !important;
+  width: 10px !important;
+  height: 10px !important;
+  margin: 0 5px !important;
+  background: white !important;
+  opacity: 1 !important;
 }
 
-.largeBannerGroup {
-  width: 9700px;
-  position: relative;
-  animation: 20s autoplayV1 infinite ease-in-out;
-}
-
-@keyframes autoplayV1 {
-  0% {margin-left: 0px}
-  4% {margin-left: -1940px}
-  15% {margin-left: -1940px}
-  19% {margin-left: -3880px}
-  34% {margin-left: -3880px}
-  38% {margin-left: -5820px}
-  52% {margin-left: -5820px}
-  56% {margin-left: -7760px}
-  71% {margin-left: -7760px}
-  75% {margin-left: -9700px}
-  100% {margin-left: -9700px}
-  }
-
-.largeBannerGroup li{
-  width: 1940px;
-  position: relative;
-  float: left;
+#bannerPagination .swiper-pagination-bullet-active {
+  border-radius: 10px !important;
+  width: 30px !important;
+  height: 10px !important;
+  margin: 0 5px !important;
+  background: #FACE32 !important;
 
 }
-
-
-
 
 
 /* --------------------Introduce Menu--------------------- */
@@ -314,9 +311,10 @@ footer {
   letter-spacing: -0.03rem;
 }
 
-.specificMenu {
+#specificMenu {
   display: grid;
-  grid-template-columns: 1fr 1280px 1fr;
+  grid-template-columns: 1fr 1400px 1fr;
+  justify-items: center;
 }
 
 .warpArrowL {
@@ -344,7 +342,6 @@ footer {
   justify-self: end;
   align-self: center;
   position: absolute;
-
   background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
 }
 
@@ -356,21 +353,13 @@ footer {
   background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
 }
 
-.specificMenu ul{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  text-align: center;
-}
-
-.specificMenu h4 {
+#specificMenu h4 {
   font-size: 18px;
   font-weight: bold;
   margin: 0;
 }
 
-.specificMenu h5 {
+#specificMenu h5 {
   font-size: 13px;
   font-weight: 400;
   color: #a1a1a1;
@@ -379,19 +368,32 @@ footer {
   line-height: 20px;
 }
 
-.menuClassic {
-  justify-self: center;
-  align-self: center;
+#specificMenuClassic {
   grid-column: 2/3;
+  width: 1280px;
+  /* overflow: hidden; */
 }
 
-.menuClassic img {
+#menuClassic {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* width: 100%; */
+  /* float: left; */
+  text-align: center;
+}
+
+#warpA, #warpB, #warpC, #warpD {
+  /* width: 260px; */
+  margin: 30px;
+  position: relative;
+}
+
+#menuClassic img {
   width: 260px;
 }
 
-.warpA, .warpB, .warpC, .warpD {
-  position: relative;
-}
+
 
 .searchDetail {
   width: 98px;
