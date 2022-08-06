@@ -260,11 +260,7 @@ footer {
   justify-items: space-between;
 }
 
-.introduceTitle {
-  justify-self: start;
-  align-self: center;
-  grid-column: 2/3;
-}
+
 
 .category {
   justify-self: end;
@@ -307,26 +303,60 @@ footer {
   letter-spacing: -0.03rem;
 }
 
-#introWholeMenu {
-  display: flex;
-  justify-content: center;
+#entireWrap {
+  display: grid;
+  grid-template-columns: 1fr 1500px 1fr;
+  height: 400px;
 
 }
 
-#wholeMenuWrap {
-  height: 348px;
+#wholeWrapWrap {
+
+  grid-column: 2/3;
+}
+
+#titleMenuStack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
   overflow: hidden;
+}
+
+.introduceTitle {
+  position: absolute;
+  top: 0px;
+  left: 100px;
+  z-index: 99;
+  /* justify-self: start;
+  align-self: center;
+  grid-column: 2/3; */
+}
+
+#wholeMenuWrap {
+  height: 400px;
+
 }
 
 #specificMenu {
   width: 1500px;
-  display: inherit;
-  /* float: left; */
-  /* position: absolute; */
+  display: block;
+}
 
-  /* display: grid;
-  grid-template-columns: 1fr 1400px 1fr;
-  justify-items: center; */
+#menuPagination {
+  background-color: rgba(147, 2, 7, 0.41);
+  width: 500px;
+  height: 30px;
+  position: absolute;
+  left: 900px;
+  top: 10px;
+}
+
+#menuPagination .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background-color: blue;
+  position: relative;
 }
 
 
@@ -367,6 +397,7 @@ footer {
 #warpA, #warpB, #warpC, #warpD, #warpE, #warpF, #warpG, #warpH {
   /* width: 260px; */
   margin: 30px;
+  padding-top: 50px;
   position: relative;
 }
 
