@@ -37,10 +37,54 @@ $(function(){
 });
 // ====================
 
+$(function(){
+  var menuSwiper = new Swiper ("#wholeWrap > .swiper-container", {
+    loop: true, // 없으면 첫 슬라이드 prev, 마지막슬라이드 next가 자동으로 비활성화됨
+    debugger: true,
+    pagination: {
+      el: "#menuPagination",
+      clickable: true,
+    }
+  })
+})
+
 
 // ====================배너 슬라이딩 애니메이션
 $(function(){
-  var menuSwiper = new Swiper ("#wholeMenuWrap .swiper-container", {
+  var menuSwiper = new Swiper ("#classicMenu .swiper-container", {
+    // loop: true, // 없으면 첫 슬라이드 prev, 마지막슬라이드 next가 자동으로 비활성화됨
+    debugger: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    }
+  })
+})
+
+$(function(){
+  var menuSwiper = new Swiper ("#freshMenu .swiper-container", {
+    loop: true, // 없으면 첫 슬라이드 prev, 마지막슬라이드 next가 자동으로 비활성화됨
+    debugger: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    }
+  })
+})
+
+$(function(){
+  var menuSwiper = new Swiper ("#premiumMenu .swiper-container", {
+    loop: true, // 없으면 첫 슬라이드 prev, 마지막슬라이드 next가 자동으로 비활성화됨
+    debugger: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    }
+  })
+})
+
+$(function(){
+  var menuSwiper = new Swiper ("#morningMenu .swiper-container", {
     loop: true, // 없으면 첫 슬라이드 prev, 마지막슬라이드 next가 자동으로 비활성화됨
     debugger: true,
     navigation: {
@@ -259,7 +303,6 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $("#warpE").hover(function(){
-    alert("activate")
 
     $("#warpE img").css({
       width: "350px",
