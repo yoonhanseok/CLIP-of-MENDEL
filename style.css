@@ -2,7 +2,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Noto Sans KR', sans-serif;
-  width: 100%;
+  width: 100vw;
 }
 
 li {
@@ -20,7 +20,7 @@ header {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  width: 100%;
+  width: 100vw;
   margin: 0;
   padding: 0;
   border-top: green solid 5px;
@@ -42,7 +42,7 @@ footer {
   justify-content: center;
   font-size: 13px;
   padding: 30px 0;
-  width: 100%;
+  width: 100vw;
   margin: 0;
   color: #666666;
   background-color: #2a2a2a;
@@ -161,7 +161,7 @@ footer {
   position: relative;
 }
 
-.dotWarp {
+.dotwrap {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -172,7 +172,7 @@ footer {
   width: 120px;
 }
 
-.dotWarp div {
+.dotwrap div {
   width: 10px;
   height: 10px;
   background-color: white;
@@ -254,23 +254,9 @@ footer {
 }
 
 
-.introBar {
-  display: grid;
-  grid-template-columns: 1fr 580px 700px 1fr;
-  justify-items: space-between;
-}
-
-
-
-.category {
-  justify-self: end;
-  align-self: center;
-  grid-column: 3/4;
-}
-
 .introTitleNew {
   z-index: 99;
-  font-size: 35px;
+  font-size: 36px;
   font-weight: 900;
   position: relative;
   float:left;
@@ -281,44 +267,17 @@ footer {
 }
 
 
-.category ul {
-  display: flex;
-  flex-direction: row;
-}
-
-.category li {
-  font-size: 15px;
-  font-weight: bold;
-  color: #666666;
-  margin: 0 16px;
-  letter-spacing: -0.03rem;
-  cursor: pointer;
-}
-
-.category span {
-  font-size: 15px;
-  font-weight: 400;
-  color: #e1e1e1;
-  margin: 0 16px;
-  letter-spacing: -0.03rem;
-}
-
 #entireWrap {
   display: grid;
   grid-template-columns: 1fr 1500px 1fr;
   height: 400px;
-
 }
 
 #wholeWrapWrap {
-
   grid-column: 2/3;
 }
 
 #titleMenuStack {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   position: relative;
   overflow: hidden;
 }
@@ -328,9 +287,6 @@ footer {
   top: 0px;
   left: 100px;
   z-index: 99;
-  /* justify-self: start;
-  align-self: center;
-  grid-column: 2/3; */
 }
 
 #wholeMenuWrap {
@@ -338,35 +294,44 @@ footer {
 
 }
 
-#specificMenu {
+#specificClassicMenu, #specificFreshMenu, #specificPremiumMenu, #specificMorningMenu {
   width: 1500px;
   display: block;
 }
 
 #menuPagination {
-  background-color: rgba(147, 2, 7, 0.41);
-  width: 500px;
-  height: 30px;
+  width: auto;
+  height: 15px;
   position: absolute;
   left: 900px;
   top: 10px;
 }
 
 #menuPagination .swiper-pagination-bullet {
-  width: 15px;
-  height: 15px;
-  background-color: blue;
-  position: relative;
+  width: auto;
+  color: #666666;
+  font-size: 17px;
+  background-color: rgba(255, 255, 255, 0);
+  opacity: 1;
+  margin: 0 30px;
+}
+
+#menuPagination .swiper-pagination-bullet-active {
+  width: auto;
+  color: #279223;
+  font-size: 18px;
+  font-weight: bolder;
+  margin: 0 30px;
 }
 
 
-#specificMenu h4 {
+.wrapA h4, .wrapB h4, .wrapC h4, .wrapD h4, .wrapE h4, .wrapF h4, .wrapG h4, .wrapH h4 {
   font-size: 18px;
   font-weight: bold;
   margin: 0;
 }
 
-#specificMenu h5 {
+.wrapA h5, .wrapB h5, .wrapC h5, .wrapD h5, .wrapE h5, .wrapF h5, .wrapG h5, .wrapH h5 {
   font-size: 13px;
   font-weight: 400;
   color: #a1a1a1;
@@ -375,44 +340,43 @@ footer {
   line-height: 20px;
 }
 
-#specificMenuClassic {
-  /* grid-column: 2/3; */
-  /* width: 1280px; */
-  /* overflow: hidden; */
-}
-
-#menuClassic {
+#menuClassicA, #menuClassicB, #menuFreshA, #menuFreshB, #menuPremiumA, #menuPremiumB, #menuMorningA, #menuMorningB {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* width: 100%; */
-  /* float: left; */
   text-align: center;
 }
 
-#menuClassic #warpF, #warpG, #warpH {
+#menuClassicB .wrapF, .wrapG, .wrapH {
   visibility: hidden;
 }
 
-#warpA, #warpB, #warpC, #warpD, #warpE, #warpF, #warpG, #warpH {
-  /* width: 260px; */
+#menuFreshB .wrapF, .wrapG, .wrapH {
+  visibility: hidden;
+}
+
+#menuPreminumB .wrapG, .wrapH {
+  visibility: hidden;
+}
+
+.wrapA, .wrapB, .wrapC, .wrapD, .wrapE, .wrapF, .wrapG, .wrapH {
   margin: 30px;
   padding-top: 50px;
   position: relative;
 }
 
-#menuClassic img {
+#menuClassicA img, #menuClassicB img, #menuFreshA img, #menuFreshB img, #menuPremiumA img, #menuPremiumB img, #menuMorningA img, #menuMorningB img {
   width: 260px;
 }
 
-#specificMenu .swiper-button-prev {
+#specificClassicMenu .swiper-button-prev {
   width: 50px;
   height: 50px;
   background-image: url("");
   overflow: hidden;
 }
 
-#specificMenu .swiper-button-prev div{
+#specificClassicMenu .swiper-button-prev div{
   width: 100px;
   height: 100px;
   background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
@@ -420,14 +384,14 @@ footer {
   position: absolute;
 }
 
-#specificMenu .swiper-button-next {
+#specificClassicMenu .swiper-button-next {
   width: 50px;
   height: 50px;
   background-image: url("");
   overflow: hidden;
 }
 
-#specificMenu .swiper-button-next div{
+#specificClassicMenu .swiper-button-next div{
   width: 100px;
   height: 100px;
   background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
@@ -436,7 +400,77 @@ footer {
   left: -50px;
 }
 
-#specificMenu .swiper-button-disabled {
+#specificClassicMenu .swiper-button-disabled {
+  opacity: 1;
+}
+
+#specificFreshMenu .swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  background-image: url("");
+  overflow: hidden;
+}
+
+#specificFreshMenu .swiper-button-prev div{
+  width: 100px;
+  height: 100px;
+  background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
+  background-size: 100px;
+  position: absolute;
+}
+
+#specificFreshMenu .swiper-button-next {
+  width: 50px;
+  height: 50px;
+  background-image: url("");
+  overflow: hidden;
+}
+
+#specificFreshMenu .swiper-button-next div{
+  width: 100px;
+  height: 100px;
+  background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
+  background-position: left;
+  position: absolute;
+  left: -50px;
+}
+
+#specificFreshMenu .swiper-button-disabled {
+  opacity: 1;
+}
+
+#specificPremiumMenu .swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  background-image: url("");
+  overflow: hidden;
+}
+
+#specificPremiumMenu .swiper-button-prev div{
+  width: 100px;
+  height: 100px;
+  background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
+  background-size: 100px;
+  position: absolute;
+}
+
+#specificPremiumMenu .swiper-button-next {
+  width: 50px;
+  height: 50px;
+  background-image: url("");
+  overflow: hidden;
+}
+
+#specificPremiumMenu .swiper-button-next div{
+  width: 100px;
+  height: 100px;
+  background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
+  background-position: left;
+  position: absolute;
+  left: -50px;
+}
+
+#specificPremiumMenu .swiper-button-disabled {
   opacity: 1;
 }
 
@@ -448,6 +482,40 @@ footer {
   display: none;
 }
 
+#specificMorningMenu .swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  background-image: url("");
+  overflow: hidden;
+}
+
+#specificMorningMenu .swiper-button-prev div{
+  width: 100px;
+  height: 100px;
+  background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
+  background-size: 100px;
+  position: absolute;
+}
+
+#specificMorningMenu .swiper-button-next {
+  width: 50px;
+  height: 50px;
+  background-image: url("");
+  overflow: hidden;
+}
+
+#specificMorningMenu .swiper-button-next div{
+  width: 100px;
+  height: 100px;
+  background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
+  background-position: left;
+  position: absolute;
+  left: -50px;
+}
+
+#specificMorningMenu .swiper-button-disabled {
+  opacity: 1;
+}
 
 /* ------------------Additional Card------------------ */
 
