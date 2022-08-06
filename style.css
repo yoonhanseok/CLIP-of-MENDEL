@@ -250,10 +250,6 @@ footer {
 /* --------------------Introduce Menu--------------------- */
 
 .introduceMenu {
-/*   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-self: center; */
   padding: 130px 0;
 }
 
@@ -311,47 +307,28 @@ footer {
   letter-spacing: -0.03rem;
 }
 
+#introWholeMenu {
+  display: flex;
+  justify-content: center;
+
+}
+
+#wholeMenuWrap {
+  height: 348px;
+  overflow: hidden;
+}
+
 #specificMenu {
-  display: grid;
+  width: 1500px;
+  display: inherit;
+  /* float: left; */
+  /* position: absolute; */
+
+  /* display: grid;
   grid-template-columns: 1fr 1400px 1fr;
-  justify-items: center;
+  justify-items: center; */
 }
 
-.warpArrowL {
-  width: 50px;
-  height: 50px;
-  grid-column: 1/2;
-  justify-self: end;
-  align-self: center;
-  margin-right: 50px;
-  background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
-}
-
-.warpArrowR {
-  width: 50px;
-  height: 50px;
-  grid-column: 3/4;
-  justify-self: start;
-  align-self: center;
-  margin-left: 50px;
-  background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
-  background-position: -50px 0px;
-}
-
-.specificMenuArrowL {
-  justify-self: end;
-  align-self: center;
-  position: absolute;
-  background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
-}
-
-.specificMenuaArrowR {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  left: -50px;
-  background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
-}
 
 #specificMenu h4 {
   font-size: 18px;
@@ -369,8 +346,8 @@ footer {
 }
 
 #specificMenuClassic {
-  grid-column: 2/3;
-  width: 1280px;
+  /* grid-column: 2/3; */
+  /* width: 1280px; */
   /* overflow: hidden; */
 }
 
@@ -383,7 +360,11 @@ footer {
   text-align: center;
 }
 
-#warpA, #warpB, #warpC, #warpD {
+#menuClassic #warpF, #warpG, #warpH {
+  visibility: hidden;
+}
+
+#warpA, #warpB, #warpC, #warpD, #warpE, #warpF, #warpG, #warpH {
   /* width: 260px; */
   margin: 30px;
   position: relative;
@@ -393,7 +374,40 @@ footer {
   width: 260px;
 }
 
+#specificMenu .swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  background-image: url("");
+  overflow: hidden;
+}
 
+#specificMenu .swiper-button-prev div{
+  width: 100px;
+  height: 100px;
+  background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
+  background-size: 100px;
+  position: absolute;
+}
+
+#specificMenu .swiper-button-next {
+  width: 50px;
+  height: 50px;
+  background-image: url("");
+  overflow: hidden;
+}
+
+#specificMenu .swiper-button-next div{
+  width: 100px;
+  height: 100px;
+  background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
+  background-position: left;
+  position: absolute;
+  left: -50px;
+}
+
+#specificMenu .swiper-button-disabled {
+  opacity: 1;
+}
 
 .searchDetail {
   width: 98px;
