@@ -37,17 +37,42 @@ $(function(){
 });
 // ====================
 
+
 // ====================배너 슬라이딩 애니메이션
-// $(function(){
-//   var menuSwiper = new Swiper ('#specificMenu .swiper-container', {
-//     direction:"horizental";,
-//
-//     navigation: {
-//       nextEl: "#specificMenu .swiper-button-next",
-//       prevEl: "#specificMenu .swiper-button-prev"
-//     }
-//   });
-// });
+$(function(){
+  var menuSwiper = new Swiper ("#wholeMenuWrap .swiper-container", {
+    loop: true, // 없으면 첫 슬라이드 prev, 마지막슬라이드 next가 자동으로 비활성화됨
+    debugger: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    }
+  })
+})
+
+$(document).ready(function(){
+  $("#specificMenu .swiper-button-prev div").hover(function(){
+    $(this).css({
+      top: "-50px",
+    }) //mouseover()에서 작동하는 함수
+  }, function(){
+    $(this).css({
+      top: "0",
+    })
+  }); //mouseout()에서 작동하는 함수
+}); //즉, hover()는 둘을 하나의 함수로 묶은 메소드
+
+$(document).ready(function(){
+  $("#specificMenu .swiper-button-next div").hover(function(){
+    $(this).css({
+      top: "-50px",
+    }) //mouseover()에서 작동하는 함수
+  }, function(){
+    $(this).css({
+      top: "0",
+    })
+  }); //mouseout()에서 작동하는 함수
+}); //즉, hover()는 둘을 하나의 함수로 묶은 메소드
 // ====================
 
 // =================   SNS 마우스 활성화 버튼
@@ -66,29 +91,6 @@ $(document).ready(function(){
 }); //즉, hover()는 둘을 하나의 함수로 묶은 메소드
 // =======================================
 
-
-// =================써브웨이 메뉴 좌/우 화살표 활성화 버튼
-$(document).ready(function(){
-  $(".warpArrowL").hover(function(){
-    $(this).css({
-      backgroundPosition: "0px -50px",
-    })
-  }, function(){
-    $(this).css({
-      backgroundPosition: "0px 0px",
-    })
-  });
-  $(".warpArrowR").hover(function(){
-    $(this).css({
-      backgroundPosition: "-50px -50px",
-    })
-  }, function(){
-    $(this).css({
-      backgroundPosition: "-50px 0px",
-    })
-  });
-});
-// =======================================
 
 
 
@@ -254,6 +256,154 @@ $(document).ready(function(){
   });
 });
 
+
+$(document).ready(function(){
+  $("#warpE").hover(function(){
+    alert("activate")
+
+    $("#warpE img").css({
+      width: "350px",
+    })
+    $("#warpE h4").css({
+      fontSize: "21px",
+    })
+    $("#warpE h5").css({
+      display: "none",
+    })
+    $("#warpE .searchDetail").css({
+      display: "block",
+      position: "absolute",
+      left: "135px",
+      top: "150px",
+    })
+  },function(){
+      $("#warpE img").css({
+        width: "260px",
+      })
+      $("#warpE h4").css({
+        fontSize: "18px",
+      })
+      $("#warpE h5").css({
+        display: "",
+      })
+    $("#warpE .searchDetail").css({
+      display: "none",
+      position: "absolute",
+      left: "135px",
+      top: "150px",
+    })
+  });
+});
+
+
+//
+// $(document).ready(function(){
+//   $("#warpF").hover(function(){
+//     $("#warpF img").css({
+//       width: "350px",
+//     })
+//     $("#warpF h4").css({
+//       fontSize: "21px",
+//     })
+//     $("#warpF h5").css({
+//       display: "none",
+//     })
+//     $("#warpF .searchDetail").css({
+//       display: "block",
+//       position: "absolute",
+//       left: "135px",
+//       top: "150px",
+//     })
+//   },function(){
+//       $("#warpF img").css({
+//         width: "260px",
+//       })
+//       $("#warpF h4").css({
+//         fontSize: "18px",
+//       })
+//       $("#warpF h5").css({
+//         display: "",
+//       })
+//     $("#warpF .searchDetail").css({
+//       display: "none",
+//       position: "absolute",
+//       left: "135px",
+//       top: "150px",
+//     })
+//   });
+// });
+//
+// $(document).ready(function(){
+//   $("#warpG").hover(function(){
+//     $("#warpG img").css({
+//       width: "350px",
+//     })
+//     $("#warpG h4").css({
+//       fontSize: "21px",
+//     })
+//     $("#warpG h5").css({
+//       display: "none",
+//     })
+//     $("#warpG .searchDetail").css({
+//       display: "block",
+//       position: "absolute",
+//       left: "135px",
+//       top: "150px",
+//     })
+//   },function(){
+//       $("#warpG img").css({
+//         width: "260px",
+//       })
+//       $("#warpG h4").css({
+//         fontSize: "18px",
+//       })
+//       $("#warpG h5").css({
+//         display: "",
+//       })
+//     $("#warpG .searchDetail").css({
+//       display: "none",
+//       position: "absolute",
+//       left: "135px",
+//       top: "150px",
+//     })
+//   });
+// });
+//
+// $(document).ready(function(){
+//   $("#warpH").hover(function(){
+//     $("#warpH img").css({
+//       width: "350px",
+//     })
+//     $("#warpH h4").css({
+//       fontSize: "21px",
+//     })
+//     $("#warpH h5").css({
+//       display: "none",
+//     })
+//     $("#warpH .searchDetail").css({
+//       display: "block",
+//       position: "absolute",
+//       left: "135px",
+//       top: "150px",
+//     })
+//   },function(){
+//       $("#warpH img").css({
+//         width: "260px",
+//       })
+//       $("#warpH h4").css({
+//         fontSize: "18px",
+//       })
+//       $("#warpH h5").css({
+//         display: "",
+//       })
+//     $("#warpH .searchDetail").css({
+//       display: "none",
+//       position: "absolute",
+//       left: "135px",
+//       top: "150px",
+//     })
+//   });
+// });
 // =======================================
 
 // =================상단 메뉴 컬러 및 밑줄 강조
