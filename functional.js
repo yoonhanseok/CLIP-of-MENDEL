@@ -197,7 +197,7 @@ $(document).ready(function(){
   var Category = ["클래식", "프래쉬&라이트", "프리미엄", "아침메뉴"]
   var WholeMenuSwiper = new Swiper ("#titleMenuStack > .swiper-container", {
     pagination: {
-      el: "#introWholeMenu > .swiper-pagination",
+      el: "#menuPagination",
       clickable: true,
       renderBullet: function (index, className) {
         return '<span class="' + className + '">' +
@@ -239,8 +239,4 @@ $(document).ready(function(){
     }
   });
 // ============================
-});
-
-$(function() {
-
 });
