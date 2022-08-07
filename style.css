@@ -8,9 +8,15 @@ body {
   width: 100%;
 }
 
+#bodyWrap {
+  min-width: 1920px;
+  position: relative;
+  border-top: #279223 solid 5px;
+}
+
 ul, li {
   list-style: none;
-  padding-inline-start: 0px;
+  padding-inline-start: 0;
 }
 
 
@@ -20,9 +26,9 @@ header {
   justify-content: center;
   position: relative;
   width: 100%;
+  min-width: 1920px;
   margin: 0;
   padding: 0;
-  border-top: green solid 5px;
   border-bottom: #a1a1a1 solid 1px;
   z-index: 100;
 }
@@ -33,25 +39,22 @@ main {
   justify-content: center;
   position: relative;
   width: 100%;
+  min-width: 1920px;
 }
 
 footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 13px;
-  padding: 30px 0;
-  width: 100%;
-  margin: 0;
-  color: #666666;
-  background-color: #2a2a2a;
+
 }
 
 /* -----------------Main BODY----------------- */
 
+
+
 .headUpper {
+  align-self: center;
   display: grid;
   grid-template-columns: 1fr 256px 768px 256px 1fr;
+  width: 100vw;
   padding: 50px, 0;
   position: relative;
 }
@@ -97,6 +100,8 @@ footer {
   display: flex;
   justify-content: center;
   position: relative;
+  width: 100vw;
+  min-width: 1920px;
 }
 
 .menuList {
@@ -154,27 +159,9 @@ footer {
 
 .mainBanner {
   align-self: center;
-  max-width: 1940px;
+  width: 1920px;
+  min-width: 1280px;
   position: relative;
-}
-
-.dotwrap {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  z-index: 92;
-  position: absolute;
-  left: 75%;
-  top: 370px;
-  width: 120px;
-}
-
-.dotwrap div {
-  width: 10px;
-  height: 10px;
-  background-color: white;
-  border-radius: 5px;
-  margin: 0 5px;
 }
 
 .subTab {
@@ -248,6 +235,7 @@ footer {
 
 .introduceMenu {
   padding: 130px 0;
+  min-width: 1920px;
 }
 
 
@@ -272,11 +260,12 @@ footer {
 
 #wholeWrapWrap {
   grid-column: 2/3;
+  min-width: 1280px;
 }
 
 #titleMenuStack {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .introduceTitle {
@@ -286,22 +275,31 @@ footer {
   z-index: 99;
 }
 
-#wholeMenuWrap {
+#introWholeMenu {
   height: 400px;
-
+  position: relative;
 }
 
-#specificClassicMenu, #specificFreshMenu, #specificPremiumMenu, #specificMorningMenu {
+#wholeMenuWrap {
+  height: 289px;
+  position: absolute;
+  top: 80px;
+}
+
+#wholeMenuWrap > div > span {
+  position: absolute;
+  bottom: 0;
   width: 1500px;
   display: block;
 }
 
 #menuPagination {
   width: auto;
-  height: 30px;
+  height: 45px;
   position: absolute;
   left: 900px;
-  top: 10px;
+  top: 0px;
+  z-index: 9999;
 }
 
 #menuPagination .swiper-pagination-bullet {
@@ -324,8 +322,7 @@ footer {
 }
 
 .wrap {
-  margin: 30px;
-  padding-top: 50px;
+  margin: 0 30px;
   position: relative;
 }
 
@@ -344,32 +341,31 @@ footer {
   line-height: 20px;
 }
 
-#menuClassicA, #menuClassicB, #menuFreshA, #menuFreshB, #menuPremiumA, #menuPremiumB, #menuMorningA, #menuMorningB {
+#wholeMenuWrap > div > span > div:first-child > div  {
+/* == #menuClassicA, #menuClassicB, #menuFreshA, #menuFreshB, #menuPremiumA, #menuPremiumB, #menuMorningA, #menuMorningB */
   display: flex;
   flex-direction: row;
   justify-content: center;
   text-align: center;
 }
 
+#wholeMenuWrap > div > span > div:first-child > div > div img {
+/* == class = wrap > image */
+  width: 260px;
+}
 
 #menuClassicB .wrap:nth-child(2), #menuClassicB .wrap:nth-child(3), #menuClassicB .wrap:nth-child(4), #menuFreshB .wrap:nth-child(2), #menuFreshB .wrap:nth-child(3), #menuFreshB .wrap:nth-child(4), #menuPremiumB .wrap:nth-child(3), #menuPremiumB .wrap:nth-child(4)  {
   visibility: hidden;
 }
 
-
-
-#menuClassicA img, #menuClassicB img, #menuFreshA img, #menuFreshB img, #menuPremiumA img, #menuPremiumB img, #menuMorningA img, #menuMorningB img {
-  width: 260px;
-}
-
-#specificClassicMenu .swiper-button-prev {
+#wholeMenuWrap > div > span .swiper-button-prev {
   width: 50px;
   height: 50px;
   background-image: url("");
   overflow: hidden;
 }
 
-#specificClassicMenu .swiper-button-prev div{
+#wholeMenuWrap > div > span .swiper-button-prev div{
   width: 100px;
   height: 100px;
   background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
@@ -377,14 +373,14 @@ footer {
   position: absolute;
 }
 
-#specificClassicMenu .swiper-button-next {
+#wholeMenuWrap > div > span .swiper-button-next {
   width: 50px;
   height: 50px;
   background-image: url("");
   overflow: hidden;
 }
 
-#specificClassicMenu .swiper-button-next div{
+#wholeMenuWrap > div > span .swiper-button-next div{
   width: 100px;
   height: 100px;
   background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
@@ -393,120 +389,7 @@ footer {
   left: -50px;
 }
 
-#specificClassicMenu .swiper-button-disabled {
-  opacity: 1;
-}
-
-#specificFreshMenu .swiper-button-prev {
-  width: 50px;
-  height: 50px;
-  background-image: url("");
-  overflow: hidden;
-}
-
-#specificFreshMenu .swiper-button-prev div{
-  width: 100px;
-  height: 100px;
-  background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
-  background-size: 100px;
-  position: absolute;
-}
-
-#specificFreshMenu .swiper-button-next {
-  width: 50px;
-  height: 50px;
-  background-image: url("");
-  overflow: hidden;
-}
-
-#specificFreshMenu .swiper-button-next div{
-  width: 100px;
-  height: 100px;
-  background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
-  background-position: left;
-  position: absolute;
-  left: -50px;
-}
-
-#specificFreshMenu .swiper-button-disabled {
-  opacity: 1;
-}
-
-#specificPremiumMenu .swiper-button-prev {
-  width: 50px;
-  height: 50px;
-  background-image: url("");
-  overflow: hidden;
-}
-
-#specificPremiumMenu .swiper-button-prev div{
-  width: 100px;
-  height: 100px;
-  background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
-  background-size: 100px;
-  position: absolute;
-}
-
-#specificPremiumMenu .swiper-button-next {
-  width: 50px;
-  height: 50px;
-  background-image: url("");
-  overflow: hidden;
-}
-
-#specificPremiumMenu .swiper-button-next div{
-  width: 100px;
-  height: 100px;
-  background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
-  background-position: left;
-  position: absolute;
-  left: -50px;
-}
-
-#specificPremiumMenu .swiper-button-disabled {
-  opacity: 1;
-}
-
-.searchDetail {
-  width: 98px;
-  height: 98px;
-  z-index: 99;
-  background-image: url("https://www.subway.co.kr/images/main/btn_more.png");
-  display: none;
-}
-
-#specificMorningMenu .swiper-button-prev {
-  width: 50px;
-  height: 50px;
-  background-image: url("");
-  overflow: hidden;
-}
-
-#specificMorningMenu .swiper-button-prev div{
-  width: 100px;
-  height: 100px;
-  background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
-  background-size: 100px;
-  position: absolute;
-}
-
-#specificMorningMenu .swiper-button-next {
-  width: 50px;
-  height: 50px;
-  background-image: url("");
-  overflow: hidden;
-}
-
-#specificMorningMenu .swiper-button-next div{
-  width: 100px;
-  height: 100px;
-  background-image: url("https://www.subway.co.kr/images/news/icon_event_slider_arr.png");
-  background-position: left;
-  position: absolute;
-  left: -50px;
-}
-
-#specificMorningMenu .swiper-button-disabled {
+#wholeMenuWrap > div > span .swiper-button-disabled {
   opacity: 1;
 }
 
@@ -519,37 +402,41 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100vw;
+  min-width: 1920px;
   background-image: url("https://www.subway.co.kr/images/main/bg_content.gif");
   background-repeat: repeat;
+}
+
+.additionalCardWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: auto;
   padding: 100px 0;
 }
 
-.additionalCard .upperFloor{
+.upperFloor{
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  max-width: 1225px;
 }
 
-.additionalCard .lowerFloor{
+.lowerFloor{
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  max-width: 1225px;
 }
 
-.additionalCard .upperFloor div{
+.upperFloor div{
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.additionalCard .upperFloor div h1{
+.upperFloor div h1{
   font-size: 30px;
   color: white;
 }
 
-.additionalCard .upperFloor div h4{
+.upperFloor div h4{
   border: white solid 2px;
   text-align: center;
   border-radius: 25px;
@@ -564,6 +451,7 @@ footer {
   justify-content: flex-start;
   width: 400px;
   height: 300px;
+  margin-right: 23px;
   background-image: url("https://www.subway.co.kr/images/main/bg_utilization.png");
 }
 
@@ -594,7 +482,7 @@ footer {
   margin-left: 400px;
 }
 
-.additionalCard .lowerFloor {
+.lowerFloor {
   margin-top: 30px;
 }
 
@@ -732,7 +620,18 @@ footer {
 
 
 /* -----------------Footer 박스 시작--------------- */
-
+.footerWrapBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 13px;
+  padding: 30px 0;
+  width: 100vw;
+  min-width: 1920px;
+  margin: 0;
+  color: #666666;
+  background-color: #2a2a2a;
+}
 
 .upperFooter {
   display: flex;
