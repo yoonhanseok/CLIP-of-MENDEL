@@ -141,273 +141,34 @@ $(document).ready(function(){
 // =======================================
 
 
-// ============ 샌드위치 메뉴별 호버링
-  $(".wrapA").hover(function(){
-    $(".wrapA img").css({
+// ============ 샌드위치 메뉴별 호버링 확대
+  $(".wrap").hover(function(){
+    $("img", this).css({
       width: "350px",
     })
-    $(".wrapA h4").css({
+    $("h4", this).css({
       fontSize: "21px",
     })
-    $(".wrapA h5").css({
+    $("h5", this).css({
       display: "none",
     })
-    $(".wrapA .searchDetail").css({
+    $(".searchDetail", this).css({
       display: "block",
       position: "absolute",
       left: "135px",
       top: "150px",
     })
   },function(){
-      $(".wrapA img").css({
+      $("img", this).css({
         width: "260px",
       })
-      $(".wrapA h4").css({
+      $("h4", this).css({
         fontSize: "18px",
       })
-      $(".wrapA h5").css({
+      $("h5", this).css({
         display: "",
       })
-    $(".wrapA .searchDetail").css({
-      display: "none",
-      position: "absolute",
-      left: "135px",
-      top: "150px",
-    })
-  });
-
-  $(".wrapB").hover(function(){
-    $(".wrapB img").css({
-      width: "350px",
-    })
-    $(".wrapB h4").css({
-      fontSize: "21px",
-    })
-    $(".wrapB h5").css({
-      display: "none",
-    })
-    $(".wrapB .searchDetail").css({
-      display: "block",
-      position: "absolute",
-      left: "135px",
-      top: "150px",
-    })
-  },function(){
-      $(".wrapB img").css({
-        width: "260px",
-      })
-      $(".wrapB h4").css({
-        fontSize: "18px",
-      })
-      $(".wrapB h5").css({
-        display: "",
-      })
-    $(".wrapB .searchDetail").css({
-      display: "none",
-      position: "absolute",
-      left: "135px",
-      top: "150px",
-    })
-  });
-
-  $(".wrapC").hover(function(){
-    $(".wrapC img").css({
-      width: "350px",
-    })
-    $(".wrapC h4").css({
-      fontSize: "21px",
-    })
-    $(".wrapC h5").css({
-      display: "none",
-    })
-    $(".wrapC .searchDetail").css({
-      display: "block",
-      position: "absolute",
-      left: "135px",
-      top: "150px",
-    })
-  },function(){
-      $(".wrapC img").css({
-        width: "260px",
-      })
-      $(".wrapC h4").css({
-        fontSize: "18px",
-      })
-      $(".wrapC h5").css({
-        display: "",
-      })
-    $(".wrapC .searchDetail").css({
-      display: "none",
-      position: "absolute",
-      left: "135px",
-      top: "150px",
-    })
-  });
-
-  $(".wrapD").hover(function(){
-    $(".wrapD img").css({
-      width: "350px",
-    })
-    $(".wrapD h4").css({
-      fontSize: "21px",
-    })
-    $(".wrapD h5").css({
-      display: "none",
-    })
-    $(".wrapD .searchDetail").css({
-      display: "block",
-      position: "absolute",
-      left: "135px",
-      top: "150px",
-    })
-  },function(){
-      $(".wrapD img").css({
-        width: "260px",
-      })
-      $(".wrapD h4").css({
-        fontSize: "18px",
-      })
-      $(".wrapD h5").css({
-        display: "",
-      })
-    $(".wrapD .searchDetail").css({
-      display: "none",
-      position: "absolute",
-      left: "135px",
-      top: "150px",
-    })
-  });
-
-  $(".wrapE").hover(function(){
-
-    $(".wrapE img").css({
-      width: "350px",
-    })
-    $(".wrapE h4").css({
-      fontSize: "21px",
-    })
-    $(".wrapE h5").css({
-      display: "none",
-    })
-    $(".wrapE .searchDetail").css({
-      display: "block",
-      position: "absolute",
-      left: "135px",
-      top: "150px",
-    })
-  },function(){
-      $(".wrapE img").css({
-        width: "260px",
-      })
-      $(".wrapE h4").css({
-        fontSize: "18px",
-      })
-      $(".wrapE h5").css({
-        display: "",
-      })
-    $(".wrapE .searchDetail").css({
-      display: "none",
-      position: "absolute",
-      left: "135px",
-      top: "150px",
-    })
-  });
-
-  $(".wrapF").hover(function(){
-    $(".wrapF img").css({
-      width: "350px",
-    })
-    $(".wrapF h4").css({
-      fontSize: "21px",
-    })
-    $(".wrapF h5").css({
-      display: "none",
-    })
-    $(".wrapF .searchDetail").css({
-      display: "block",
-      position: "absolute",
-      left: "135px",
-      top: "150px",
-    })
-  },function(){
-      $(".wrapF img").css({
-        width: "260px",
-      })
-      $(".wrapF h4").css({
-        fontSize: "18px",
-      })
-      $(".wrapF h5").css({
-        display: "",
-      })
-    $(".wrapF .searchDetail").css({
-      display: "none",
-      position: "absolute",
-      left: "135px",
-      top: "150px",
-    })
-  });
-
-  $(".wrapG").hover(function(){
-    $(".wrapG img").css({
-      width: "350px",
-    })
-    $(".wrapG h4").css({
-      fontSize: "21px",
-    })
-    $(".wrapG h5").css({
-      display: "none",
-    })
-    $(".wrapG .searchDetail").css({
-      display: "block",
-      position: "absolute",
-      left: "135px",
-      top: "150px",
-    })
-  },function(){
-      $(".wrapG img").css({
-        width: "260px",
-      })
-      $(".wrapG h4").css({
-        fontSize: "18px",
-      })
-      $(".wrapG h5").css({
-        display: "",
-      })
-    $(".wrapG .searchDetail").css({
-      display: "none",
-      position: "absolute",
-      left: "135px",
-      top: "150px",
-    })
-  });
-
-  $(".wrapH").hover(function(){
-    $(".wrapH img").css({
-      width: "350px",
-    })
-    $(".wrapH h4").css({
-      fontSize: "21px",
-    })
-    $(".wrapH h5").css({
-      display: "none",
-    })
-    $(".wrapH .searchDetail").css({
-      display: "block",
-      position: "absolute",
-      left: "135px",
-      top: "150px",
-    })
-  },function(){
-      $(".wrapH img").css({
-        width: "260px",
-      })
-      $(".wrapH h4").css({
-        fontSize: "18px",
-      })
-      $(".wrapH h5").css({
-        display: "",
-      })
-    $(".wrapH .searchDetail").css({
+    $(".searchDetail", this).css({
       display: "none",
       position: "absolute",
       left: "135px",
@@ -480,4 +241,6 @@ $(document).ready(function(){
 // ============================
 });
 
+$(function() {
 
+});
