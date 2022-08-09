@@ -304,28 +304,31 @@ footer {
 }
 
 .introduceTitle {
+  display: flex;
+  justify-content: center;
   width: 100%;
-  min-width: 1280px;
+  max-width: 1500px;
   height: 50px;
   margin-bottom: 30px;
 }
 
 .titleUpperBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 100%;
-  min-width: 1280px;
 }
 
 .titleBox {
-  position: absolute;
-  left: 150px;
+  margin-left: 150px; */
 }
 
 .menuCategory {
   display: flex;
   flex-direction: row;
-  position: absolute;
+  position: relative;
   top: 20px;
-  left: 900px;
+  margin-right: 150px;
 }
 
 .menuCategory li {
