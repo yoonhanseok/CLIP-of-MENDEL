@@ -278,6 +278,7 @@ footer {
   padding: 0;
   top: -5px;
   left: 20px;
+  width: 287px;
 }
 
 
@@ -300,7 +301,7 @@ footer {
   width: 100%;
   max-width: 1500px;
   position: relative;
-
+  overflow: hidden;
 }
 
 .introduceTitle {
@@ -315,12 +316,13 @@ footer {
 .titleUpperBox {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   width: 100%;
 }
 
 .titleBox {
-  margin-left: 150px; */
+  width: 287px;
+  margin-left: 150px;
+  margin-right: 450px;
 }
 
 .menuCategory {
@@ -328,7 +330,7 @@ footer {
   flex-direction: row;
   position: relative;
   top: 20px;
-  margin-right: 150px;
+
 }
 
 .menuCategory li {
