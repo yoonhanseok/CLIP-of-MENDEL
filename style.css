@@ -429,6 +429,7 @@ footer {
   width: 98px;
   height: 98px;
   background-image: url(https://www.subway.co.kr/images/main/btn_more.png);
+  background-repeat: no-repeat;
   z-index: 999;
 }
 
